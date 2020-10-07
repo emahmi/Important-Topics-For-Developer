@@ -1,6 +1,6 @@
 ﻿# Programming Topics
 
-C#
+## C#
         
 1. How to create: Class, struct, enum, interface
 2. Access Modifiers: private, public, protected, internal        
@@ -10,8 +10,7 @@ C#
    1. Types of delegates
       1. Single cast
       2. Multicast
-      3. Generic delegate
-  
+      3. Generic delegate  
 6. Generics (Generic vs Non Generic collections) e.g, ArrayList, List<T>, List<string>, List<Products> etc, IList, 
 7. ICollection,IEnumerable,IQueryable, IList
 8. How to create extension method
@@ -25,8 +24,6 @@ C#
          1. DataTable
          2. DataColumn
          3. DataRow         
-
-
 11. Entity Framework: How to communicate with database; types of EF approaches:
    1. Code First
    2. DB First
@@ -44,11 +41,8 @@ C#
       1. OK
       2. InternalServerError
       3. BadRequest
-
-
-
-
-# MVC
+        
+## MVC
 
 1. What is MVC design pattern
 2. View vs Partial
@@ -69,11 +63,8 @@ C#
    1. Perform CRUD Operations 
       1. http://prntscr.com/hytue0
       2. http://prntscr.com/hytv3h
-
-
-
-
-# JavaScript
+      
+## JavaScript
 
 1. How to create variable, Array (What is Jagged Array) 
    1. Var, let, const etc
@@ -81,9 +72,7 @@ C#
 3. How to create function
 4. How to create self executing function 
 5. How to create class using function in javascript. Private, Public variables and functions 
-   1. What is prototype. How to create extension method
-
-
+   1. What is prototype. How to create extension method.
 6. What is JSON object. How to create JSON object. 
    1. JSON method JSON.stringify, JSON.parse
 7. What are element selectors. How many types of selectors
@@ -97,11 +86,7 @@ C#
    1. https://linqjs.codeplex.com/
    2. https://github.com/mihaifm/linq
 
-
-
-
-
-# JQuery   
+## JQuery   
      
 1. Reference. http://api.jquery.com/
 2. what is ready function how to create it.
@@ -114,8 +99,6 @@ C#
 6. jquery ajax, post, get, load methods. How to use ajax method to post json objects array and get json objects from server (controller)
    1. Get collection from controller action using ajax method.
    2. Post form using ajax method to controller action.
-
-
 7. jquery animation methods.
 8. Bind events with DOM elements. How to bind/unbind events using off, on methods.         
 9. What are mouse and keyboard events.
@@ -129,10 +112,7 @@ C#
       1. Create following list using jquery template
          1. https://prnt.sc/hg6l9k
 
-
-
-
-# SQL 
+## SQL 
 
 1. Sequence of executing different clauses in query : Select, Where, Group By, Having, Order by, From
 2. Select, insert, update, delete statement

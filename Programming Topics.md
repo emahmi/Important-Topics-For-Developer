@@ -43,6 +43,7 @@ sealed class SealedClass {
 ### Abstract Class:
 Data abstraction is the process of hiding certain details and showing only essential information to the user. Abstraction can be achieved with either abstract classes or interfaces.
 ```csharp
+// Abstract Class
 abstract class Animal {
   public abstract void animalSound();
   public void sleep() {
@@ -99,7 +100,7 @@ dynamic value4 = false;
 An anonymous type is a type (class) without any name that can contain public read-only properties only. It cannot contain other members, such as fields, methods, events, etc.
 #### Example
 ```csharp
-var student = new { Id = 1, FirstName = "James", LastName = "Bond" };
+var student = new { Id = 1, FirstName = "James", LastName = "Bond" }; // Anonymous variable
 Console.WriteLine(student.Id); //output: 1
 Console.WriteLine(student.FirstName); //output: James
 Console.WriteLine(student.LastName); //output: Bond
@@ -107,3 +108,35 @@ Console.WriteLine(student.LastName); //output: Bond
 student.Id = 2;//Error: cannot chage value
 student.FirstName = "Steve";//Error: cannot chage value
 ```
+### Anonymous Function / Method
+#### Example
+```csharp		
+// Anonymous Method using delegate keyword
+public class Program{
+	public delegate void Print(int value);	
+	public static void Main(){
+		Print newObj = delegate(int val) { 
+				Console.WriteLine("Inside Anonymous value: {0}", val); // Output: "Inside Anonymous value: 10011"
+			};
+    	newObj(10011); 
+	}
+}
+```
+
+### Lambda Expression
+Lambda expressions in C# are used like anonymous functions, with the difference that in Lambda expressions you don’t need to specify the type of the value that you input thus making it more flexible to use.
+#### Example
+```csharp		
+public static void Main(){  
+        List<int> list = new List<int>() { 1, 2, 3, 4, 5, 6 };  
+        List<int> evenNumbers = list.FindAll(x => (x % 2) == 0);  // It gives all even numbers
+} 
+```
+
+
+
+#### Example
+```csharp		
+
+```
+

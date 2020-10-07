@@ -1,5 +1,4 @@
-﻿Programming Topics
-
+﻿# Programming Topics
 
 C#
         
@@ -49,11 +48,8 @@ C#
 
 
 
+# MVC
 
-
-
-
-MVC
 1. What is MVC design pattern
 2. View vs Partial
 3. ViewData vs ViewBag vs TempData (See differences)
@@ -75,8 +71,9 @@ MVC
       2. http://prntscr.com/hytv3h
 
 
-JavaScript
 
+
+# JavaScript
 
 1. How to create variable, Array (What is Jagged Array) 
    1. Var, let, const etc
@@ -104,8 +101,8 @@ JavaScript
 
 
 
-
-JQuery        
+# JQuery   
+     
 1. Reference. http://api.jquery.com/
 2. what is ready function how to create it.
 3. What are selectors. Using different types of selectors in jquery
@@ -135,9 +132,8 @@ JQuery
 
 
 
+# SQL 
 
-
-SQL 
 1. Sequence of executing different clauses in query : Select, Where, Group By, Having, Order by, From
 2. Select, insert, update, delete statement
 3. Primary Key, Foreign key

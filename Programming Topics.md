@@ -133,6 +133,50 @@ public static void Main(){
 } 
 ```
 
+### Events
+Events are user actions such as key press, clicks, mouse movements, etc., or some occurrence such as system generated notifications. Applications need to respond to events when they occur. For example, interrupts. Events are used for inter-process communication.
+#### Example
+```csharp		
+//Declare a delegate and then declare a variable of the delegate with event keyword.
+public delegate void Notify();  // delegate
+                    
+public class ProcessBusinessLogic
+{
+    public event Notify ProcessCompleted; // event
+
+}
+```
+
+### Delegate
+C# Delegates are similar to pointers to functions, in C or C++. A delegate is a reference type variable that holds the reference to a method. The reference can be changed at runtime.
+#### Example
+```csharp		
+// Delegate Syntax
+[access modifier] delegate [return type] [delegate name]([parameters])
+public delegate void MyDelegate(string msg);
+```
+### Types of Delegates:
+- SingleCast Delegate
+- MultiCast Delegate
+- Generic Delegate
+
+### SingleCast Delegate:
+SingleCast Delegates refer to a single method with matching signature at a time. SingleCast Delegates derive from the System.Delegate class
+
+
+### Generic Delegate:
+These delegates are instantiated when needed for a specific type provided as parameters. In other words, a Generic allows you to write a class or method that can work with any data type.
+#### Types of Generic Delegates:
+- Func
+- Action
+- Predicate
+#### Example
+```csharp		
+
+```
+
+### MultiCast Delegate:
+This is a kind of delegates that can refer to multiple methods that have the same signature at one time.
 
 
 #### Example
@@ -140,3 +184,8 @@ public static void Main(){
 
 ```
 
+
+#### Example
+```csharp		
+
+```

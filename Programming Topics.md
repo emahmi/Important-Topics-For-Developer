@@ -1,18 +1,4 @@
-# Table of contents
-1. [Question-1](#Question-1)
- 	1. [Class](#Class)
- 	2. [Enum](#Enum)
- 	3. [Struct](#Struct)
- 	4. [Interface](#Interface)
-2. [Question-2](#Question-2)
-    1. [Private](#Private)
-    2. [Public](#Public)
-    3. [Protecte](#Protecte)
-    4. [Protected Internal](#Protected Internal)
-    4. [Private Protected](#Private Protected)
-3. [Question-3](#Question-3)
-
-## Question-1
+## Question-1 
 
 ### Class
 A class is like a blueprint of a specific object. In object-oriented programming, a class defines some properties, fields, events, methods, etc. 
@@ -39,7 +25,7 @@ it cannot contain fields, auto-implemented properties.
 The code is only accessible within the same class.
 ### Public:
 The code is accessible for all classes.
-### Protecte:
+### Protected:
 The code is accessible within the same class, or in a class that is inherited from that class.
 ### Internal:
 The code is only accessible within its own assembly, but not from another assembly.

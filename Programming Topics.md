@@ -21,7 +21,8 @@ it cannot contain fields, auto-implemented properties.
 
 ## Question-2
 
-### Private: #### The code is only accessible within the same class.
+### Private:
+The code is only accessible within the same class.
 ### Public:
 The code is accessible for all classes.
 ### Protecte:

@@ -1,4 +1,4 @@
-##Class
+## Class
 A class is like a blueprint of a specific object. In object-oriented programming, a class defines some properties, fields, events, methods, etc. 
 A class defines the kinds of data and the functionality their objects will have. A class enables you to create your custom types by grouping 
 variables of other types, methods, and events.

@@ -199,7 +199,7 @@ Example: ArrayList, BitArray
 
 - BitArray −  It represents an array of the binary representation using the values 1 and 0. It is used when you need to store the bits but do not know the number of bits in advance.
 
-### interface ICollection:
+### Interface ICollection:
 The ICollection interface in C# defines the size, enumerators, and synchronization methods for all nongeneric collections. It is the base interface for classes in the System.Collections namespace.
 
 #### Example
@@ -208,10 +208,68 @@ public interface ICollection : IEnumerable      // without parameters
 public interface ICollection<T>: IEnumerable    // with parameters
 ```
 
-
-
+### Interface IEnumerable:
+The IEnumerable<T> is used to iterate a read only collection. It has only one method GetEnumeartor() which allows you to iterate the read-only collection using a foreach loop. It only iterates in the forward direction. IEnumerable <T> is defined in as follows:
 
 #### Example
 ```csharp		
+// implementation of the GetEnumerator()
+public interface IEnumerable<out T> : IEnumerable {
+    //Returns an ienumerator that iterate through the collection.
+    IEnumerator<T> GetEnumerator();
+}
+``` 
+### Interface IQueryable:
+IQueryable<T> allows you to execute a query against a specific data source wherein type of data is not specified.
+This works for read-only access to a collection that implements that IEnumerable can be used with a foreach statement.
+
+#### Example
+```csharp       
+public interface IQueryable : IEnumerable {
+    Type ElementType { get; }
+    Expression Expression { get; }
+    IQueryprovider Provider { get; }
+}
+```
+### Interface IList:
+The IList interface has a non-generic collection of objects that can be individually accessed by index. IList has some properties i.e. Count, isReadOnly, Add(Obj), InddexOf(Obj) etc.
+
+#### Example
+```csharp       
+public interface IList<T> : ICollection<T>, IEnumerable<T>, IEnumerable {
+    T this[int index] { get; set; }
+    int IndexOf(T item);
+    void Insert(int index, T item);
+    void RemoveAt(int index);
+}
+```
+### Extension Methods:
+Extension methods, as the name suggests, are additional methods. Extension methods allow you to inject additional methods without modifying, deriving or recompiling the original class, struct or interface. Extension methods can be added to your own custom class, .NET framework classes, or third party classes or interfaces.
+
+#### Example
+```csharp       
+int i = 10;
+// IsGreaterThan() is extension method
+bool result = i.IsGreaterThan(100); // checking 10 > 100, then returns false 
+```
+### LINQ:
+LINQ (Language Integrated Query) is uniform query syntax in C# and VB.NET to retrieve data from different sources and formats. It is integrated in C# or VB, thereby eliminating the mismatch between programming languages and databases, as well as providing a single querying interface for different types of data sources.
+
+### LINQ to Object:
+The LINQ to Objects provides a new way to get the data from the collections with LINQ Queries, but before that, there is a need to write a lot of foreach loops to get the data from the collections. There are also many advantages of LINQ to Objects over traditional foreach loops like more readability, powerful filtering, capability of grouping, enhanced ordering with minimal application coding.
+
+
+#### Example
+```csharp       
+
+```
+
+#### Example
+```csharp       
+
+```
+
+#### Example
+```csharp       
 
 ```

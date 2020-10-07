@@ -1,8 +1,6 @@
 ## Question-1 
-
 ### Class
 A class is like a blueprint of a specific object. In object-oriented programming, a class defines some properties, fields, events, methods, etc. A class defines the kinds of data and the functionality their objects will have. A class enables you to create your custom types by grouping variables of other types, methods, and events.
-
 ### Enum
 An enum lets you declare a series of identifiers for use in your code. The compiler replaces them with numbers for you. It's often useful for making your code more readable and maintainable, because you can use descriptive names without the performance penalty of string comparisons. 
 
@@ -13,7 +11,6 @@ A struct contains zero or more pieces of data (variables or objects), grouped to
 An interface can be defined using the interface keyword. An interface can contain declarations of methods, properties, indexers, and events. However, it cannot contain fields, auto-implemented properties.
 
 ## Question-2
-
 ### Private:
 The code is only accessible within the same class.
 ### Public:
@@ -28,7 +25,6 @@ It is used to specifies that access is limited to the current assembly or types 
 It is used to specifies that access is limited to the containing class or types derived from the containing class within the current assembly.
 
 ## Question-3
-
 ### Sealed Class:
 Sealed classes are used to restrict the inheritance feature of object oriented programming. Once a class is defined as a sealed class, this class cannot be inherited. 
 ```csharp
@@ -122,7 +118,7 @@ public class Program{
 	}
 }
 ```
-
+## Question-5
 ### Lambda Expression
 Lambda expressions in C# are used like anonymous functions, with the difference that in Lambda expressions you don’t need to specify the type of the value that you input thus making it more flexible to use.
 #### Example

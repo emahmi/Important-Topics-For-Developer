@@ -51,6 +51,7 @@ It is used to avoid the compile-time type checking. The compiler does not check 
 
 ### Anonymous Type
 An anonymous type is a type (class) without any name that can contain public read-only properties only. It cannot contain other members, such as fields, methods, events, etc.
+#### Example
 ```csharp
 var student = new { Id = 1, FirstName = "James", LastName = "Bond" };
 Console.WriteLine(student.Id); //output: 1

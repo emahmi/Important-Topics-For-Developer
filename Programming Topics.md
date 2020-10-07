@@ -1,16 +1,16 @@
 # Table of contents
-1. [Introduction](#Question-1)
- 	1. [Sub paragraph](#Class)
- 	2. [Sub paragraph](#Enum)
- 	3. [Sub paragraph](#Struct)
- 	4. [Sub paragraph](#Interface)
-2. [Some paragraph](#Question-2)
-    1. [Sub paragraph](#Private)
-    2. [Sub paragraph](#Public)
-    3. [Sub paragraph](#Protecte)
-    4. [Sub paragraph](#Protected Internal)
-    4. [Sub paragraph](#Private Protected)
-3. [Another paragraph](#Question-3)
+1. [Question-1](#Question-1)
+ 	1. [Class](#Class)
+ 	2. [Enum](#Enum)
+ 	3. [Struct](#Struct)
+ 	4. [Interface](#Interface)
+2. [Question-2](#Question-2)
+    1. [Private](#Private)
+    2. [Public](#Public)
+    3. [Protecte](#Protecte)
+    4. [Protected Internal](#Protected Internal)
+    4. [Private Protected](#Private Protected)
+3. [Question-3](#Question-3)
 
 ## Question-1
 

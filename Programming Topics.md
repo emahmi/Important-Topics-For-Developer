@@ -174,7 +174,7 @@ These delegates are instantiated when needed for a specific type provided as par
 - Action
 - Predicate
 
-### Generics Collection
+### Generics Collection:
 Generic collections hold elements of same datatypes. Generic collections (List<T>, Dictionary<T, U>, SortedList<T, U>, Queue<T> etc) store elements internally in arrays of their actual types and so no boxing or casting is ever required. Generic collections are faster than non-generic collection when using value types and more convenient when using reference types.
 
 Example: List, Dictionary, Hashset.
@@ -191,18 +191,24 @@ class KeyValuePair<TKey, TValue>
 }
 ```
 
-### Non-Generics Collection
+### Non-Generics Collection:
 Non-generic collections hold elements of different datatypes. In the .NET Framework, the non-generic collections (ArrayList, Hashtable, SortedKist, Queue etc.) store elements internally in 'object' arrays which, can of course, store any type of data.Generic collections are bit slower than non-generic collection when using value types and not much convenient when using reference types.
 
-Example:
+Example: ArrayList, BitArray
 - ArrayList − It represents ordered collection of an object that can be indexed individually. ArrayList is an alternative to an array. However, unlike array you can add and remove items from a list at a specified position using an index and the array resizes itself automatically.
 
 - BitArray −  It represents an array of the binary representation using the values 1 and 0. It is used when you need to store the bits but do not know the number of bits in advance.
 
+### interface ICollection:
+The ICollection interface in C# defines the size, enumerators, and synchronization methods for all nongeneric collections. It is the base interface for classes in the System.Collections namespace.
+
 #### Example
 ```csharp		
-
+public interface ICollection : IEnumerable      // without parameters
+public interface ICollection<T>: IEnumerable    // with parameters
 ```
+
+
 
 
 #### Example

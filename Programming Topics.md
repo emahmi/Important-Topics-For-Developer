@@ -31,12 +31,46 @@ It is used to specifies that access is limited to the containing class or types 
 
 ### Sealed Class:
 Sealed classes are used to restrict the inheritance feature of object oriented programming. Once a class is defined as a sealed class, this class cannot be inherited. 
+```csharp
+// Sealed class  
+sealed class SealedClass {  
+    public int Add(int x, int y) {  
+        return x + y;  
+    }  
+}
+```
 
 ### Abstract Class:
 Data abstraction is the process of hiding certain details and showing only essential information to the user. Abstraction can be achieved with either abstract classes or interfaces.
+```csharp
+abstract class Animal {
+  public abstract void animalSound();
+  public void sleep() {
+    Console.WriteLine("Zzz");
+  }
+}
+```
 
 ### Concrete Class
 A concrete class is a class that has an implementation for all of its methods. They cannot have any unimplemented methods. It can also extend an abstract class or implement an interface as long as it implements all their methods. In other words, we can say that any class which is not abstract is a concrete class.
+```csharp
+// Concrete Class 
+class Main { 
+    static int product(int a, int b) { 
+        return a * b; 
+    } 
+    static int sum(int a, int b) { 
+        return a + b; 
+    } 
+    public static void main(String args[]) { 
+        int p = product(5, 10); 
+        int s = sum(5, 10); 
+  
+        System.out.println("Product: " + p); 
+        System.out.println("Sum: " + s); 
+    } 
+}
+```
 
 ### POCO Class
 A Plain Old CLR Objects (POCO) is a class, which doesn't depend on any framework-specific base class. It is like any other normal .NET class. Due to this, they are called Plain Old CLR Objects. These POCO entities support most of the same LINQ queries as Entity Object derived entities. These POCO classes implements only the domain business logic of the Application.
@@ -45,9 +79,21 @@ A Plain Old CLR Objects (POCO) is a class, which doesn't depend on any framework
 
 ### Object Type:
 Object is a real world entity, for example, chair, car, pen etc. In other words, object is an entity that has state and behavior. Here, state means data and behavior means functionality. Object is created at runtime. Object is an instance of a class. All the members of the class can be accessed through Object.
+#### Example
+```csharp
+Student s1 = new Student();//creating an object of Student    
+```
 
 ### Dynamic Type:
 It is used to avoid the compile-time type checking. The compiler does not check the type of the dynamic type variable at compile time, instead of this, the compiler gets the type at the run time. If the variable does not initialized it will not throw an error.
+#### Example
+```csharp
+// Dynamic variables 
+dynamic value1 = "HelloWorld"; 
+dynamic value2 = 123234; 
+dynamic value3 = 2132.55; 
+dynamic value4 = false; 
+```
 
 ### Anonymous Type
 An anonymous type is a type (class) without any name that can contain public read-only properties only. It cannot contain other members, such as fields, methods, events, etc.

@@ -1,3 +1,5 @@
+## Q-1
+
 ### Class
 A class is like a blueprint of a specific object. In object-oriented programming, a class defines some properties, fields, events, methods, etc. 
 A class defines the kinds of data and the functionality their objects will have. A class enables you to create your custom types by grouping 
@@ -16,3 +18,22 @@ class, a struct can have member functions and template parameters and so on.
 ### Interface
 An interface can be defined using the interface keyword. An interface can contain declarations of methods, properties, indexers, and events. However, 
 it cannot contain fields, auto-implemented properties.
+
+## Q-2
+
+### Private:
+The code is only accessible within the same class.
+### Public:
+The code is accessible for all classes.
+### Protecte:
+The code is accessible within the same class, or in a class that is inherited from that class.
+### Internal:
+The code is only accessible within its own assembly, but not from another assembly.
+### Protected Internal:
+It is used to specifies that access is limited to the current assembly or types derived from the containing class.
+### Private Protected:
+It is used to specifies that access is limited to the containing class or types derived from the containing class within the current assembly.
+
+## Q-3
+
+

@@ -1,6 +1,8 @@
 ## Question-1 
+
 ### Class
 A class is like a blueprint of a specific object. In object-oriented programming, a class defines some properties, fields, events, methods, etc. A class defines the kinds of data and the functionality their objects will have. A class enables you to create your custom types by grouping variables of other types, methods, and events.
+
 ### Enum
 An enum lets you declare a series of identifiers for use in your code. The compiler replaces them with numbers for you. It's often useful for making your code more readable and maintainable, because you can use descriptive names without the performance penalty of string comparisons. 
 
@@ -11,6 +13,7 @@ A struct contains zero or more pieces of data (variables or objects), grouped to
 An interface can be defined using the interface keyword. An interface can contain declarations of methods, properties, indexers, and events. However, it cannot contain fields, auto-implemented properties.
 
 ## Question-2
+
 ### Private:
 The code is only accessible within the same class.
 ### Public:
@@ -25,6 +28,7 @@ It is used to specifies that access is limited to the current assembly or types 
 It is used to specifies that access is limited to the containing class or types derived from the containing class within the current assembly.
 
 ## Question-3
+
 ### Sealed Class:
 Sealed classes are used to restrict the inheritance feature of object oriented programming. Once a class is defined as a sealed class, this class cannot be inherited. 
 ```csharp
@@ -35,7 +39,6 @@ sealed class SealedClass {
     }  
 }
 ```
-
 ### Abstract Class:
 Data abstraction is the process of hiding certain details and showing only essential information to the user. Abstraction can be achieved with either abstract classes or interfaces.
 ```csharp
@@ -47,7 +50,6 @@ abstract class Animal {
   }
 }
 ```
-
 ### Concrete Class
 A concrete class is a class that has an implementation for all of its methods. They cannot have any unimplemented methods. It can also extend an abstract class or implement an interface as long as it implements all their methods. In other words, we can say that any class which is not abstract is a concrete class.
 ```csharp
@@ -68,7 +70,6 @@ class Main {
     } 
 }
 ```
-
 ### POCO Class
 A Plain Old CLR Objects (POCO) is a class, which doesn't depend on any framework-specific base class. It is like any other normal .NET class. Due to this, they are called Plain Old CLR Objects. These POCO entities support most of the same LINQ queries as Entity Object derived entities. These POCO classes implements only the domain business logic of the Application.
 
@@ -80,7 +81,6 @@ Object is a real world entity, for example, chair, car, pen etc. In other words,
 ```csharp
 Student s1 = new Student();//creating an object of Student    
 ```
-
 ### Dynamic Type:
 It is used to avoid the compile-time type checking. The compiler does not check the type of the dynamic type variable at compile time, instead of this, the compiler gets the type at the run time. If the variable does not initialized it will not throw an error.
 #### Example
@@ -91,7 +91,6 @@ dynamic value2 = 123234;
 dynamic value3 = 2132.55; 
 dynamic value4 = false; 
 ```
-
 ### Anonymous Type
 An anonymous type is a type (class) without any name that can contain public read-only properties only. It cannot contain other members, such as fields, methods, events, etc.
 #### Example
@@ -118,7 +117,9 @@ public class Program{
 	}
 }
 ```
+
 ## Question-5
+
 ### Lambda Expression
 Lambda expressions in C# are used like anonymous functions, with the difference that in Lambda expressions you don’t need to specify the type of the value that you input thus making it more flexible to use.
 #### Example
@@ -170,6 +171,8 @@ These delegates are instantiated when needed for a specific type provided as par
 - Action
 - Predicate
 
+## Question-6
+
 ### Generics Collection:
 Generic collections hold elements of same datatypes. Generic collections (List<T>, Dictionary<T, U>, SortedList<T, U>, Queue<T> etc) store elements internally in arrays of their actual types and so no boxing or casting is ever required. Generic collections are faster than non-generic collection when using value types and more convenient when using reference types.
 
@@ -194,6 +197,8 @@ Example: ArrayList, BitArray
 - ArrayList − It represents ordered collection of an object that can be indexed individually. ArrayList is an alternative to an array. However, unlike array you can add and remove items from a list at a specified position using an index and the array resizes itself automatically.
 
 - BitArray −  It represents an array of the binary representation using the values 1 and 0. It is used when you need to store the bits but do not know the number of bits in advance.
+
+## Question-7
 
 ### Interface ICollection:
 The ICollection interface in C# defines the size, enumerators, and synchronization methods for all nongeneric collections. It is the base interface for classes in the System.Collections namespace.
@@ -239,6 +244,8 @@ public interface IList<T> : ICollection<T>, IEnumerable<T>, IEnumerable {
     void RemoveAt(int index);
 }
 ```
+## Question-8
+
 ### Extension Methods:
 Extension methods, as the name suggests, are additional methods. Extension methods allow you to inject additional methods without modifying, deriving or recompiling the original class, struct or interface. Extension methods can be added to your own custom class, .NET framework classes, or third party classes or interfaces.
 
@@ -254,6 +261,8 @@ LINQ (Language Integrated Query) is uniform query syntax in C# and VB.NET to ret
 ### LINQ to Object:
 The LINQ to Objects provides a new way to get the data from the collections with LINQ Queries, but before that, there is a need to write a lot of foreach loops to get the data from the collections. There are also many advantages of LINQ to Objects over traditional foreach loops like more readability, powerful filtering, capability of grouping, enhanced ordering with minimal application coding.
 
+
+## Question-9
 
 #### Example
 ```csharp       

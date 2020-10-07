@@ -155,7 +155,7 @@ C# Delegates are similar to pointers to functions, in C or C++. A delegate is a 
 [access modifier] delegate [return type] [delegate name]([parameters])
 public delegate void MyDelegate(string msg);
 ```
-### Types of Delegates:
+#### Types of Delegates:
 - SingleCast Delegate
 - MultiCast Delegate
 - Generic Delegate
@@ -163,21 +163,41 @@ public delegate void MyDelegate(string msg);
 ### SingleCast Delegate:
 SingleCast Delegates refer to a single method with matching signature at a time. SingleCast Delegates derive from the System.Delegate class
 
+### MultiCast Delegate:
+This is a kind of delegates that can refer to multiple methods that have the same signature at one time.
 
 ### Generic Delegate:
 These delegates are instantiated when needed for a specific type provided as parameters. In other words, a Generic allows you to write a class or method that can work with any data type.
+
 #### Types of Generic Delegates:
 - Func
 - Action
 - Predicate
+
+### Generics Collection
+Generic collections hold elements of same datatypes. Generic collections (List<T>, Dictionary<T, U>, SortedList<T, U>, Queue<T> etc) store elements internally in arrays of their actual types and so no boxing or casting is ever required. Generic collections are faster than non-generic collection when using value types and more convenient when using reference types.
+
+Example: List, Dictionary, Hashset.
+- Dictionary − Dictionary is a collection of keys and values in C#. Dictionary <TKey, TValue> is included in the System.Collection.Generics namespace.
+- Hashset − HashSet in C# eliminates duplicate strings or elements in an array. In C#, it is an optimized set collection.
+
 #### Example
 ```csharp		
-
+// Generic Class with Multiple Type Parameters
+class KeyValuePair<TKey, TValue>
+{
+    public TKey Key { get; set; }
+    public TValue Value { get; set; }
+}
 ```
 
-### MultiCast Delegate:
-This is a kind of delegates that can refer to multiple methods that have the same signature at one time.
+### Non-Generics Collection
+Non-generic collections hold elements of different datatypes. In the .NET Framework, the non-generic collections (ArrayList, Hashtable, SortedKist, Queue etc.) store elements internally in 'object' arrays which, can of course, store any type of data.Generic collections are bit slower than non-generic collection when using value types and not much convenient when using reference types.
 
+Example:
+- ArrayList − It represents ordered collection of an object that can be indexed individually. ArrayList is an alternative to an array. However, unlike array you can add and remove items from a list at a specified position using an index and the array resizes itself automatically.
+
+- BitArray −  It represents an array of the binary representation using the values 1 and 0. It is used when you need to store the bits but do not know the number of bits in advance.
 
 #### Example
 ```csharp		

@@ -36,4 +36,27 @@ Sealed classes are used to restrict the inheritance feature of object oriented p
 Data abstraction is the process of hiding certain details and showing only essential information to the user. Abstraction can be achieved with either abstract classes or interfaces.
 
 ### Concrete Class
-A concrete class is a class that has an implementation for all of its methods. They cannot have any unimplemented methods. It can also extend an abstract class or implement an interface as long as it implements all their methods. It is a complete class and can be instantiated. In other words, we can say that any class which is not abstract is a concrete class.
+A concrete class is a class that has an implementation for all of its methods. They cannot have any unimplemented methods. It can also extend an abstract class or implement an interface as long as it implements all their methods. In other words, we can say that any class which is not abstract is a concrete class.
+
+### POCO Class
+A Plain Old CLR Objects (POCO) is a class, which doesn't depend on any framework-specific base class. It is like any other normal .NET class. Due to this, they are called Plain Old CLR Objects. These POCO entities support most of the same LINQ queries as Entity Object derived entities. These POCO classes implements only the domain business logic of the Application.
+
+## Question-4
+
+### Object Type:
+Object is a real world entity, for example, chair, car, pen etc. In other words, object is an entity that has state and behavior. Here, state means data and behavior means functionality. Object is created at runtime. Object is an instance of a class. All the members of the class can be accessed through Object.
+
+### Dynamic Type:
+It is used to avoid the compile-time type checking. The compiler does not check the type of the dynamic type variable at compile time, instead of this, the compiler gets the type at the run time. If the variable does not initialized it will not throw an error.
+
+### Anonymous Type
+An anonymous type is a type (class) without any name that can contain public read-only properties only. It cannot contain other members, such as fields, methods, events, etc.
+```csharp
+var student = new { Id = 1, FirstName = "James", LastName = "Bond" };
+Console.WriteLine(student.Id); //output: 1
+Console.WriteLine(student.FirstName); //output: James
+Console.WriteLine(student.LastName); //output: Bond
+
+student.Id = 2;//Error: cannot chage value
+student.FirstName = "Steve";//Error: cannot chage value
+```

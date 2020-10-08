@@ -394,7 +394,7 @@ Basically, it converts a Value Type to a Reference Type, and vice versa.
 </tr>
 <tr>        
 <td>
-***Example:***
+Example:
 <pre lang="csharp">
 const int x = 3;
 const string y = "foo";
@@ -402,7 +402,7 @@ eadonly Object obj = getObject();
 </pre>
 </td>
 <td>
-***Example:***
+Example:
 <pre lang="csharp">
 const int x = 3;
 const string y = "foo";

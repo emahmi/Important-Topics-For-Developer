@@ -262,7 +262,7 @@ The LINQ to Objects provides a new way to get the data from the collections with
 
 
 # Question-10
-### ADO.NET
+### ADO.NET:
 ADO.NET provides a bridge between the front end controls and the back end database. The ADO.NET objects encapsulate all the data access operations and the controls interact with these objects to display data, thus hiding the details of movement of data.
 
 #### Types of ADO.NET
@@ -349,6 +349,25 @@ public partial class DataTableForm : System.Web.UI.Page {
         }  
     }  
 ```
+
+# Question-11
+### Entity Framework:
+Entity Framework is an Object Relational Mapper (ORM) which is a type of tool that simplifies mapping between objects in your software to the tables and columns of a relational database. An open source ORM framework for ADO.NET.Responsible for creating database connections and executing commands. ORM also helps to keep track of changes to those objects.
+
+#### Types of Entity Framework (EF)
+- ***Model First:*** Using a Model-First approach, a developer may not need to write any code for generating a database. The tools are more of a drag and drop controls that just need inputs like name, properties and how they are related
+- ***Database First:*** Here we already have an existing database and need to access that in our application. Establishing the data access methodology for existing database with Entity Framework will help us to generate the context and classes in our solution through which we can access the database. 
+- ***Code First:*** Using the Code-First approach, a developer’s focus is only on the code and not on the database or data model. The developer can define classes and their mapping in the code itself.
+
+# Question-12
+### AutoMapper:
+The AutoMapper in C# is a mapper between two objects. That is AutoMapper is an object-object mapper. It maps the properties of two different objects by transforming the input object of one type to the output object of another type.
+
+# Question-13
+### Data Types:
+In C#, these data types are categorized based on how they store their value in the memory.
+- ***Value Type:***  A data type is a value type if it holds a data value within its own memory space. It means the variables of these data types directly contain values. _Example: int i = 100;_
+- ***Reference Type:*** It stores the address where the value is being stored. In other words, a reference type contains a pointer to another memory location that holds the data. _Example: string s = "Hello World!";_
 
 #### Example
 ```csharp       

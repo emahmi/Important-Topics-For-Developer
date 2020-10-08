@@ -14,23 +14,19 @@ An interface can be defined using the interface keyword. An interface can contai
 
 # Question-2
 
-### Private:
-The code is only accessible within the same class.
-### Public:
-The code is accessible for all classes.
-### Protected:
-The code is accessible within the same class, or in a class that is inherited from that class.
-### Internal:
-The code is only accessible within its own assembly, but not from another assembly.
-### Protected Internal:
-It is used to specifies that access is limited to the current assembly or types derived from the containing class.
-### Private Protected:
-It is used to specifies that access is limited to the containing class or types derived from the containing class within the current assembly.
+- ***Private:*** The code is only accessible within the same class.
+- ***Public:*** The code is accessible for all classes.
+- ***Protected:*** The code is accessible within the same class, or in a class that is inherited from that class.
+- **Internal:*** The code is only accessible within its own assembly, but not from another assembly.
+- ***Protected Internal:*** It is used to specifies that access is limited to the current assembly or types derived from the containing class.
+- ***Private Protected:*** It is used to specifies that access is limited to the containing class or types derived from the containing class within the current assembly.
 
 # Question-3
 
 ### Sealed Class:
 Sealed classes are used to restrict the inheritance feature of object oriented programming. Once a class is defined as a sealed class, this class cannot be inherited. 
+
+#### Example
 ```csharp
 // Sealed class  
 sealed class SealedClass {  
@@ -41,6 +37,8 @@ sealed class SealedClass {
 ```
 ### Abstract Class:
 Data abstraction is the process of hiding certain details and showing only essential information to the user. Abstraction can be achieved with either abstract classes or interfaces.
+
+#### Example
 ```csharp
 // Abstract Class
 abstract class Animal {
@@ -52,6 +50,8 @@ abstract class Animal {
 ```
 ### Concrete Class
 A concrete class is a class that has an implementation for all of its methods. They cannot have any unimplemented methods. It can also extend an abstract class or implement an interface as long as it implements all their methods. In other words, we can say that any class which is not abstract is a concrete class.
+
+#### Example
 ```csharp
 // Concrete Class 
 class Main { 
@@ -157,14 +157,11 @@ public delegate void MyDelegate(string msg);
 - MultiCast Delegate
 - Generic Delegate
 
-### SingleCast Delegate:
-SingleCast Delegates refer to a single method with matching signature at a time. SingleCast Delegates derive from the System.Delegate class
+***SingleCast Delegate:*** SingleCast Delegates refer to a single method with matching signature at a time. SingleCast Delegates derive from the System.Delegate class
 
-### MultiCast Delegate:
-This is a kind of delegates that can refer to multiple methods that have the same signature at one time.
+***MultiCast Delegate:*** This is a kind of delegates that can refer to multiple methods that have the same signature at one time.
 
-### Generic Delegate:
-These delegates are instantiated when needed for a specific type provided as parameters. In other words, a Generic allows you to write a class or method that can work with any data type.
+***Generic Delegate:*** These delegates are instantiated when needed for a specific type provided as parameters. In other words, a Generic allows you to write a class or method that can work with any data type.
 
 #### Types of Generic Delegates:
 - Func
@@ -175,10 +172,10 @@ These delegates are instantiated when needed for a specific type provided as par
 
 ### Generics Collection:
 Generic collections hold elements of same datatypes. Generic collections (List<T>, Dictionary<T, U>, SortedList<T, U>, Queue<T> etc) store elements internally in arrays of their actual types and so no boxing or casting is ever required. Generic collections are faster than non-generic collection when using value types and more convenient when using reference types.
-
 Example: List, Dictionary, Hashset.
-- Dictionary − Dictionary is a collection of keys and values in C#. Dictionary <TKey, TValue> is included in the System.Collection.Generics namespace.
-- Hashset − HashSet in C# eliminates duplicate strings or elements in an array. In C#, it is an optimized set collection.
+
+- ***Dictionary:*** Dictionary is a collection of keys and values in C#. Dictionary <TKey, TValue> is included in the System.Collection.Generics namespace.
+- ***Hashset:*** HashSet in C# eliminates duplicate strings or elements in an array. In C#, it is an optimized set collection.
 
 #### Example
 ```csharp		
@@ -193,10 +190,10 @@ class KeyValuePair<TKey, TValue>
 ### Non-Generics Collection:
 Non-generic collections hold elements of different datatypes. In the .NET Framework, the non-generic collections (ArrayList, Hashtable, SortedKist, Queue etc.) store elements internally in 'object' arrays which, can of course, store any type of data.Generic collections are bit slower than non-generic collection when using value types and not much convenient when using reference types.
 
-Example: ArrayList, BitArray
-- ArrayList − It represents ordered collection of an object that can be indexed individually. ArrayList is an alternative to an array. However, unlike array you can add and remove items from a list at a specified position using an index and the array resizes itself automatically.
+####Examples
+- ***ArrayList:*** It represents ordered collection of an object that can be indexed individually. ArrayList is an alternative to an array. However, unlike array you can add and remove items from a list at a specified position using an index and the array resizes itself automatically.
 
-- BitArray −  It represents an array of the binary representation using the values 1 and 0. It is used when you need to store the bits but do not know the number of bits in advance.
+- ***BitArray:*** It represents an array of the binary representation using the values 1 and 0. It is used when you need to store the bits but do not know the number of bits in advance.
 
 # Question-7
 

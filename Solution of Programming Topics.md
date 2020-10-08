@@ -1,4 +1,4 @@
-## Question-1 
+# Question-1 
 
 ### Class
 A class is like a blueprint of a specific object. In object-oriented programming, a class defines some properties, fields, events, methods, etc. A class defines the kinds of data and the functionality their objects will have. A class enables you to create your custom types by grouping variables of other types, methods, and events.
@@ -12,7 +12,7 @@ A struct contains zero or more pieces of data (variables or objects), grouped to
 ### Interface
 An interface can be defined using the interface keyword. An interface can contain declarations of methods, properties, indexers, and events. However, it cannot contain fields, auto-implemented properties.
 
-## Question-2
+# Question-2
 
 ### Private:
 The code is only accessible within the same class.
@@ -27,7 +27,7 @@ It is used to specifies that access is limited to the current assembly or types 
 ### Private Protected:
 It is used to specifies that access is limited to the containing class or types derived from the containing class within the current assembly.
 
-## Question-3
+# Question-3
 
 ### Sealed Class:
 Sealed classes are used to restrict the inheritance feature of object oriented programming. Once a class is defined as a sealed class, this class cannot be inherited. 
@@ -73,7 +73,7 @@ class Main {
 ### POCO Class
 A Plain Old CLR Objects (POCO) is a class, which doesn't depend on any framework-specific base class. It is like any other normal .NET class. Due to this, they are called Plain Old CLR Objects. These POCO entities support most of the same LINQ queries as Entity Object derived entities. These POCO classes implements only the domain business logic of the Application.
 
-## Question-4
+# Question-4
 
 ### Object Type:
 Object is a real world entity, for example, chair, car, pen etc. In other words, object is an entity that has state and behavior. Here, state means data and behavior means functionality. Object is created at runtime. Object is an instance of a class. All the members of the class can be accessed through Object.
@@ -118,7 +118,7 @@ public class Program{
 }
 ```
 
-## Question-5
+# Question-5
 
 ### Lambda Expression
 Lambda expressions in C# are used like anonymous functions, with the difference that in Lambda expressions you don’t need to specify the type of the value that you input thus making it more flexible to use.
@@ -171,7 +171,7 @@ These delegates are instantiated when needed for a specific type provided as par
 - Action
 - Predicate
 
-## Question-6
+# Question-6
 
 ### Generics Collection:
 Generic collections hold elements of same datatypes. Generic collections (List<T>, Dictionary<T, U>, SortedList<T, U>, Queue<T> etc) store elements internally in arrays of their actual types and so no boxing or casting is ever required. Generic collections are faster than non-generic collection when using value types and more convenient when using reference types.
@@ -198,7 +198,7 @@ Example: ArrayList, BitArray
 
 - BitArray −  It represents an array of the binary representation using the values 1 and 0. It is used when you need to store the bits but do not know the number of bits in advance.
 
-## Question-7
+# Question-7
 
 ### Interface ICollection:
 The ICollection interface in C# defines the size, enumerators, and synchronization methods for all nongeneric collections. It is the base interface for classes in the System.Collections namespace.
@@ -244,7 +244,7 @@ public interface IList<T> : ICollection<T>, IEnumerable<T>, IEnumerable {
     void RemoveAt(int index);
 }
 ```
-## Question-8
+# Question-8
 
 ### Extension Methods:
 Extension methods, as the name suggests, are additional methods. Extension methods allow you to inject additional methods without modifying, deriving or recompiling the original class, struct or interface. Extension methods can be added to your own custom class, .NET framework classes, or third party classes or interfaces.
@@ -255,6 +255,8 @@ int i = 10;
 // IsGreaterThan() is extension method
 bool result = i.IsGreaterThan(100); // checking 10 > 100, then returns false 
 ```
+## Question-9
+
 ### LINQ:
 LINQ (Language Integrated Query) is uniform query syntax in C# and VB.NET to retrieve data from different sources and formats. It is integrated in C# or VB, thereby eliminating the mismatch between programming languages and databases, as well as providing a single querying interface for different types of data sources.
 
@@ -262,7 +264,32 @@ LINQ (Language Integrated Query) is uniform query syntax in C# and VB.NET to ret
 The LINQ to Objects provides a new way to get the data from the collections with LINQ Queries, but before that, there is a need to write a lot of foreach loops to get the data from the collections. There are also many advantages of LINQ to Objects over traditional foreach loops like more readability, powerful filtering, capability of grouping, enhanced ordering with minimal application coding.
 
 
-## Question-9
+# Question-10
+### ADO.NET
+ADO.NET provides a bridge between the front end controls and the back end database. The ADO.NET objects encapsulate all the data access operations and the controls interact with these objects to display data, thus hiding the details of movement of data.
+
+#### Types of ADO.NET
+    1. SQLConnection: It is used to initializes a new instance of the SqlConnection class.
+    #### Example
+    ```csharp       
+    using (SqlConnection connection = new SqlConnection(connectionString)) {    
+        connection.Open();         
+    } 
+    ```
+    2. SQLCommand: 
+        a. SQLDataReader
+        b. SQLDataAdapter
+        c. Dataset
+            i.   DataTable
+            ii.  DataColumn
+            iii. DataRow 
+
+
+
+#### Example
+```csharp       
+
+```
 
 #### Example
 ```csharp       

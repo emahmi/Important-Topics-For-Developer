@@ -269,20 +269,22 @@ The LINQ to Objects provides a new way to get the data from the collections with
 ADO.NET provides a bridge between the front end controls and the back end database. The ADO.NET objects encapsulate all the data access operations and the controls interact with these objects to display data, thus hiding the details of movement of data.
 
 #### Types of ADO.NET
-    1. SQLConnection: It is used to initializes a new instance of the SqlConnection class.
-    #### Example
-    ```csharp       
-    using (SqlConnection connection = new SqlConnection(connectionString)) {    
-        connection.Open();         
-    } 
-    ```
-    2. SQLCommand: 
-        a. SQLDataReader
-        b. SQLDataAdapter
-        c. Dataset
-            i.   DataTable
-            ii.  DataColumn
-            iii. DataRow 
+1. SQLConnection: It is used to initializes a new instance of the SqlConnection class.
+
+#### Example
+```csharp       
+using (SqlConnection connection = new SqlConnection(connectionString)) {    
+    connection.Open();         
+} 
+```
+
+2. SQLCommand: 
+    1. SQLDataReader
+    2. SQLDataAdapter
+    3. Dataset
+        1. DataTable
+        2. DataColumn
+        3. DataRow 
 
 
 

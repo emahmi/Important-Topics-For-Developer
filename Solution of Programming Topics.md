@@ -369,6 +369,28 @@ In C#, these data types are categorized based on how they store their value in t
 - ***Value Type:***  A data type is a value type if it holds a data value within its own memory space. It means the variables of these data types directly contain values. _Example: int i = 100;_
 - ***Reference Type:*** It stores the address where the value is being stored. In other words, a reference type contains a pointer to another memory location that holds the data. _Example: string s = "Hello World!";_
 
+# Question-13
+### Boxing and Unboxing:
+Basically, it converts a Value Type to a Reference Type, and vice versa.
+| BOXING                                                                               |  UNBOXING                                                      |
+|:-:                                                                                   |:-:                                                             |
+| It convert value type into an object type.                                           | It convert an object type into value type.                     |
+| Boxing is an implicit conversion process.                                            | Unboxing is the explicit conversion process.                   |
+| Here, the value stored on the stack copied to the object stored on the heap memory.  | Here, the object stored on the heap memory copied to the value stored on the stack .                                                                                                                                   |
+| static public void Main(){ 
+        int val = 2019;   
+        // Boxing 
+        object o = val;   
+        // Change the value of val 
+        val = 2000;
+    }                                                                                  | static public void Main() { 
+        int val = 2019;   
+        // Boxing 
+        object o = val;   
+        // Unboxing 
+        int x = (int)o;
+    }                                                                |
+
 #### Example
 ```csharp       
 

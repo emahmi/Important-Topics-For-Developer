@@ -269,7 +269,7 @@ The LINQ to Objects provides a new way to get the data from the collections with
 ADO.NET provides a bridge between the front end controls and the back end database. The ADO.NET objects encapsulate all the data access operations and the controls interact with these objects to display data, thus hiding the details of movement of data.
 
 #### Types of ADO.NET
-1. SQLConnection: It is used to establish an open connection to the SQL Server database. It is a sealed class so that cannot be inherited.
+- *SQLConnection:* It is used to establish an open connection to the SQL Server database. It is a sealed class so that cannot be inherited.
 
 #### Example
 ```csharp       
@@ -278,10 +278,40 @@ using (SqlConnection connection = new SqlConnection(connectionString)) {
 } 
 ```
 
-2. SQLCommand: This class is used to store and execute SQL statement for SQL Server database. It is a sealed class so that cannot be inherited.
+- *SQLCommand:* This class is used to store and execute SQL statement for SQL Server database. It is a sealed class so that cannot be inherited.
 
-    1. SQLDataReader: This class is used to read data from SQL Server database. It reads data in forward-only stream of rows from a SQL Server database. it is sealed class so that cannot be inherited. It inherits DbDataReader class and implements IDisposable interface.
-    2. SQLDataAdapter: The DataAdapter works as a bridge between a DataSet and a data source to retrieve data. DataAdapter is a class that represents a set of SQL commands and a database connection. It can be used to fill the DataSet and update the data source.
+#### Example
+```csharp       
+static void Main(string[] args) {  
+            new Program().CreateTable();  
+        }  
+        public void CreateTable() {  
+            SqlConnection connection = null;  
+            try {  
+                // Creating Connection  
+                connection = new SqlConnection("data source=.; database=student; integrated security=SSPI");  
+                // writing sql query  
+                SqlCommand command = new SqlCommand("select * from student", connection);  
+                // Opening Connection  
+                connection.Open();  
+                // Executing the SQL query  
+                SqlDataReader dataReader = command.ExecuteReader();  
+                while (dataReader.Read()) {  
+                    Console.WriteLine(dataReader["name"]+" "+ dataReader["email"]);  
+                }  
+            }  
+            catch (Exception e) {  
+                Console.WriteLine("OOPs, something went wrong." + e);  
+            }  
+            // Closing the connection  
+            finally {  
+                connection.Close();  
+            }  
+        }  
+```
+- *SQLDataReader:* This class is used to read data from SQL Server database. It reads data in forward-only stream of rows from a SQL Server database. it is sealed class so that cannot be inherited. It inherits DbDataReader class and implements IDisposable interface.
+    
+- *SQLDataAdapter:* The DataAdapter works as a bridge between a DataSet and a data source to retrieve data. DataAdapter is a class that represents a set of SQL commands and a database connection. It can be used to fill the DataSet and update the data source.
 
 #### Example
 ```csharp       
@@ -303,10 +333,10 @@ namespace DataSetExample
     }  
 }  
 ```
-    3. Dataset:  It is used to fetch data without interacting with a Data Source that's why, it also known as disconnected data access method. It is an in-memory data store that can hold more than one table at the same time.
-        1. DataTable: DataTable represents relational data into tabular form. ADO.NET provides a DataTable class to create and use data table independently. It does not have schema. We can create table schema by adding and constraints to the table.
-        2. DataColumn: The DataColumn object represents a column of a DataTable. It allows us to add data column to the DataColumnCollection using its Add method.
-        3. DataRow: The DataCRow object represents rows of a DataTable. It allows us to add data column to the DataRowCollection using its Add method.
+- Dataset:  It is used to fetch data without interacting with a Data Source that's why, it also known as disconnected data access method. It is an in-memory data store that can hold more than one table at the same time.
+- DataTable: DataTable represents relational data into tabular form. ADO.NET provides a DataTable class to create and use data table independently. It does not have schema. We can create table schema by adding and constraints to the table.
+- DataColumn: The DataColumn object represents a column of a DataTable. It allows us to add data column to the DataColumnCollection using its Add method.
+- DataRow: The DataCRow object represents rows of a DataTable. It allows us to add data column to the DataRowCollection using its Add method.
 
 #### Example
 ```csharp       

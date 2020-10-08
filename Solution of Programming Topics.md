@@ -396,17 +396,36 @@ Basically, it converts a Value Type to a Reference Type, and vice versa.
 <td>
 Example:
 <pre lang="csharp">
-const int x = 3;
-const string y = "foo";
-eadonly Object obj = getObject();
+static public void Main() {   
+        // assigned int value 
+        // 2020 to num 
+        int num = 2020;   
+        // boxing 
+        object obj = num;   
+        // value of num to be change 
+        num = 100;   
+        System.Console.WriteLine 
+        ("Value - type value of num is : {0}", num); 
+        System.Console.WriteLine 
+        ("Object - type value of obj is : {0}", obj); 
+} 
 </pre>
 </td>
 <td>
 Example:
 <pre lang="csharp">
-const int x = 3;
-const string y = "foo";
-eadonly Object obj = getObject();
+static public void Main() { 
+        // assigned int value 
+        // 23 to num 
+        int num = 23;   
+        // boxing 
+        object obj = num;   
+        // unboxing 
+        int i = (int)obj;   
+        // Display result 
+        Console.WriteLine("Value of ob object is : " + obj); 
+        Console.WriteLine("Value of i is : " + i); 
+} 
 </pre>
 </td>        
 </tr>

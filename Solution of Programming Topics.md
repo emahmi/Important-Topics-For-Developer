@@ -17,7 +17,7 @@ An interface can be defined using the interface keyword. An interface can contai
 - ***Private:*** The code is only accessible within the same class.
 - ***Public:*** The code is accessible for all classes.
 - ***Protected:*** The code is accessible within the same class, or in a class that is inherited from that class.
-- **Internal:*** The code is only accessible within its own assembly, but not from another assembly.
+- ***Internal:*** The code is only accessible within its own assembly, but not from another assembly.
 - ***Protected Internal:*** It is used to specifies that access is limited to the current assembly or types derived from the containing class.
 - ***Private Protected:*** It is used to specifies that access is limited to the containing class or types derived from the containing class within the current assembly.
 
@@ -190,7 +190,7 @@ class KeyValuePair<TKey, TValue>
 ### Non-Generics Collection:
 Non-generic collections hold elements of different datatypes. In the .NET Framework, the non-generic collections (ArrayList, Hashtable, SortedKist, Queue etc.) store elements internally in 'object' arrays which, can of course, store any type of data.Generic collections are bit slower than non-generic collection when using value types and not much convenient when using reference types.
 
-####Examples
+#### Examples
 - ***ArrayList:*** It represents ordered collection of an object that can be indexed individually. ArrayList is an alternative to an array. However, unlike array you can add and remove items from a list at a specified position using an index and the array resizes itself automatically.
 
 - ***BitArray:*** It represents an array of the binary representation using the values 1 and 0. It is used when you need to store the bits but do not know the number of bits in advance.

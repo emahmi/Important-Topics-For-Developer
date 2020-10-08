@@ -377,7 +377,23 @@ Basically, it converts a Value Type to a Reference Type, and vice versa.
 | It convert value type into an object type.                                           | It convert an object type into value type.                     |
 | Boxing is an implicit conversion process.                                            | Unboxing is the explicit conversion process.                   |
 | Here, the value stored on the stack copied to the object stored on the heap memory.  | Here, the object stored on the heap memory copied to the value stored on the stack .                                                                                                                                   |
-| <pre lang="csharp">    static public void Main(){         int val = 2019;           // Boxing         object o = val;           // Change the value of al         val = 2000;    }     </pre>                                                 | <pre lang="csharp">        static public void Main() {         int val = 2019;           // Boxing         object o = val;           // Unboxing         int x = (int)o;    }    </pre>                                |
+| <pre lang="csharp"> 
+  static public void Main(){         
+  int val = 2019;           
+  // Boxing         
+  object o = val;           
+  // Change the value of al         
+  val = 2000;    
+  }     
+  </pre>                                                                               | <pre lang="csharp">       
+                                                                                         static public void Main() {         
+                                                                                         int val = 2019;           
+                                                                                         // Boxing        
+                                                                                         object o = val;          
+                                                                                         // Unboxing        
+                                                                                         int x = (int)o;    
+                                                                                         }   
+                                                                                         </pre>                                                          |
 
 
 

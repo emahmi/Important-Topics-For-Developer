@@ -387,10 +387,8 @@ Basically, it converts a Value Type to a Reference Type, and vice versa.
 <td>Unboxing is the explicit conversion process.</td>
 </tr>
 <tr>
-    <td>
-       Here, the value stored on the stack copied to the object stored on the heap memory. 
-    </td>
-    <td>Here, the object stored on the heap memory copied to the value stored on the stack.</td>
+<td>Here, the value stored on the stack copied to the object stored on the heap memory.</td>
+<td>Here, the object stored on the heap memory copied to the value stored on the stack.</td>
 </tr>
 <tr>        
 <td>
@@ -424,44 +422,170 @@ static public void Main() {
 </tr>
 </table>
 
-
-
-
-
-
-
+# Question-14
+### Foreach loop:
+Foreach loop iterates through each item, hence called foreach loop.
 
 #### Example
 ```csharp       
-
+public static void Main(string[] args)
+        {
+            char[] myArray = {'H','e','l','l','o'};
+ 
+            foreach(char ch in myArray)
+            {
+                Console.WriteLine(ch);
+            }
 ```
+### Parallel.ForEach loop:
+Parallel.ForEach loop in C# runs upon multiple threads and processing takes place in a  parallel way.
+#### Example
+```csharp       
+public static void Main(string[] args)
+        {
+            char[] myArray = {'H','e','l','l','o'};
+ 
+            Parallel.ForEach(myArray, ch =>
+            {
+                Console.WriteLine(ch);
+            });
+```
+### Task and Thread:
+.NET framework provides Threading.Tasks class to let you create tasks and run them asynchronously. A task is an object that represents some work that should be done. The task can tell you if the work is completed and if the operation returns a result, the task gives you the result.
+
+<!-- ### Thread:
+.NET Framework has thread-associated classes in System.Threading namespace.  A Thread is a small set of executable instructions.
+ -->
+<table>
+<tr>
+<th>Task</th>
+<th>Thread</th>
+</tr>
+<tr>
+<td>.NET framework provides Threading.Tasks class to let you create tasks and run them asynchronously. A task is an object that represents some work that should be done. The task can tell you if the work is completed and if the operation returns a result, the task gives you the result.</td>
+<td>.NET Framework has thread-associated classes in System.Threading namespace.  A Thread is a small set of executable instructions.</td>
+</tr>
+<tr>        
+<td>
+Example:
+<pre lang="csharp">
+static void Main(string[] args) {  
+    Task < string > obTask = Task.Run(() => (  
+        return“ Hello”));  
+    Console.WriteLine(obTask.result);  
+} 
+</pre>
+</td>
+<td>
+Example:
+<pre lang="csharp">
+static void Main(string[] args) {  
+    Thread thread = new Thread(new ThreadStart(getMyName));  
+    thread.Start();  
+}  
+public void getMyName() {}  
+</pre>
+</td>        
+</tr>
+</table>
+
+- ***Async function with await keyword***
 
 #### Example
 ```csharp       
+Console.WriteLine(DateTime.Now);
+// This block takes 1 second to run because all
+// 5 tasks are running simultaneously
+{
+    var a = Task.Delay(1000);
+    var b = Task.Delay(1000);
+    var c = Task.Delay(1000);
+    var d = Task.Delay(1000);
+    var e = Task.Delay(1000);
 
+    await a;
+    await b;
+    await c;
+    await d;
+    await e;
+}
+
+Console.WriteLine(DateTime.Now);
+// This block takes 5 seconds to run because each "await"
+// pauses the code until the task finishes
+{
+    await Task.Delay(1000);
+    await Task.Delay(1000);
+    await Task.Delay(1000);
+    await Task.Delay(1000);
+    await Task.Delay(1000);
+}
+Console.WriteLine(DateTime.Now);
 ```
+- ***How to cancel Task***
 
 #### Example
 ```csharp       
-
+class Program {
+    static void Main() {
+        var ts = new CancellationTokenSource();
+        CancellationToken ct = ts.Token;
+        Task.Factory.StartNew(() => {
+            while (true) {
+                // do some heavy work here
+                Thread.Sleep(100);
+                if (ct.IsCancellationRequested) {
+                    // another thread decided to cancel
+                    Console.WriteLine("task canceled");
+                    break;
+                }
+            }
+        }, ct);
+        // Simulate waiting 3s for the task to complete
+        Thread.Sleep(3000);
+        // Can't wait anymore => cancel this task 
+        ts.Cancel();
+        Console.ReadLine();
+    }
+}
 ```
+
+# Question-17
+### Web API:
+ASP.NET Web API is a framework that makes it easy to build HTTP Service that reaches a broad range of clients, including browsers and mobile devices. Using ASP.NET, web API can enable communicating by different devices from the same database.
+
+#### 1.CRUD Methods:
+- ***GET:*** The GET method means retrieve whatever information (in the form of an entity) is identified by the Request-URI.
+- ***POST:*** POST method has a value parameter which is of type string. Whatever we are passing here, we want to add it to our static variable.
+- ***PUT:*** PUT method has two parameters, the id and the new value which we want to update it with.
+- ***DELETE:*** We use the DELETE method to remove an item.
+
+#### 2. IHttpActionResult:
+IHttpActionResult contains a single method, ExecuteAsync, which asynchronously creates an HttpResponseMessage instance.If a controller action returns an IHttpActionResult, Web API calls the ExecuteAsync method to create an HttpResponseMessage. Then it converts the HttpResponseMessage into an HTTP response message.
 
 #### Example
 ```csharp       
+public class TextResult : IHttpActionResult
+{
+    string _value;
+    HttpRequestMessage _request;
 
+    public TextResult(string value, HttpRequestMessage request)
+    {
+        _value = value;
+        _request = request;
+    }
+    public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
+    {
+        var response = new HttpResponseMessage()
+        {
+            Content = new StringContent(_value),
+            RequestMessage = _request
+        };
+        return Task.FromResult(response);
+    }
+}
 ```
-
-#### Example
-```csharp       
-
-```
-
-#### Example
-```csharp       
-
-```
-
-#### Example
-```csharp       
-
-```
+- OK
+- InternalServerError
+- BadRequest

@@ -14,12 +14,12 @@ An interface can be defined using the interface keyword. An interface can contai
 
 # Question-2
 
-- ***Private:*** The code is only accessible within the same class.
-- ***Public:*** The code is accessible for all classes.
-- ***Protected:*** The code is accessible within the same class, or in a class that is inherited from that class.
-- ***Internal:*** The code is only accessible within its own assembly, but not from another assembly.
-- ***Protected Internal:*** It is used to specifies that access is limited to the current assembly or types derived from the containing class.
-- ***Private Protected:*** It is used to specifies that access is limited to the containing class or types derived from the containing class within the current assembly.
+- **Private:** The code is only accessible within the same class.
+- **Public:** The code is accessible for all classes.
+- **Protected:** The code is accessible within the same class, or in a class that is inherited from that class.
+- **Internal:** The code is only accessible within its own assembly, but not from another assembly.
+- **Protected Internal:** It is used to specifies that access is limited to the current assembly or types derived from the containing class.
+- **Private Protected:** It is used to specifies that access is limited to the containing class or types derived from the containing class within the current assembly.
 
 # Question-3
 
@@ -157,11 +157,11 @@ public delegate void MyDelegate(string msg);
 - MultiCast Delegate
 - Generic Delegate
 
-***SingleCast Delegate:*** SingleCast Delegates refer to a single method with matching signature at a time. SingleCast Delegates derive from the System.Delegate class
+**SingleCast Delegate:** SingleCast Delegates refer to a single method with matching signature at a time. SingleCast Delegates derive from the System.Delegate class
 
-***MultiCast Delegate:*** This is a kind of delegates that can refer to multiple methods that have the same signature at one time.
+**MultiCast Delegate:** This is a kind of delegates that can refer to multiple methods that have the same signature at one time.
 
-***Generic Delegate:*** These delegates are instantiated when needed for a specific type provided as parameters. In other words, a Generic allows you to write a class or method that can work with any data type.
+**Generic Delegate:** These delegates are instantiated when needed for a specific type provided as parameters. In other words, a Generic allows you to write a class or method that can work with any data type.
 
 #### Types of Generic Delegates:
 - Func
@@ -174,8 +174,8 @@ public delegate void MyDelegate(string msg);
 Generic collections hold elements of same datatypes. Generic collections (List<T>, Dictionary<T, U>, SortedList<T, U>, Queue<T> etc) store elements internally in arrays of their actual types and so no boxing or casting is ever required. Generic collections are faster than non-generic collection when using value types and more convenient when using reference types.
 Example: List, Dictionary, Hashset.
 
-- ***Dictionary:*** Dictionary is a collection of keys and values in C#. Dictionary <TKey, TValue> is included in the System.Collection.Generics namespace.
-- ***Hashset:*** HashSet in C# eliminates duplicate strings or elements in an array. In C#, it is an optimized set collection.
+- **Dictionary:** Dictionary is a collection of keys and values in C#. Dictionary <TKey, TValue> is included in the System.Collection.Generics namespace.
+- **Hashset:** HashSet in C# eliminates duplicate strings or elements in an array. In C#, it is an optimized set collection.
 
 #### Example
 ```csharp		
@@ -191,9 +191,9 @@ class KeyValuePair<TKey, TValue>
 Non-generic collections hold elements of different datatypes. In the .NET Framework, the non-generic collections (ArrayList, Hashtable, SortedKist, Queue etc.) store elements internally in 'object' arrays which, can of course, store any type of data.Generic collections are bit slower than non-generic collection when using value types and not much convenient when using reference types.
 
 #### Examples
-- ***ArrayList:*** It represents ordered collection of an object that can be indexed individually. ArrayList is an alternative to an array. However, unlike array you can add and remove items from a list at a specified position using an index and the array resizes itself automatically.
+- **ArrayList:** It represents ordered collection of an object that can be indexed individually. ArrayList is an alternative to an array. However, unlike array you can add and remove items from a list at a specified position using an index and the array resizes itself automatically.
 
-- ***BitArray:*** It represents an array of the binary representation using the values 1 and 0. It is used when you need to store the bits but do not know the number of bits in advance.
+- **BitArray:** It represents an array of the binary representation using the values 1 and 0. It is used when you need to store the bits but do not know the number of bits in advance.
 
 # Question-7
 
@@ -266,7 +266,7 @@ The LINQ to Objects provides a new way to get the data from the collections with
 ADO.NET provides a bridge between the front end controls and the back end database. The ADO.NET objects encapsulate all the data access operations and the controls interact with these objects to display data, thus hiding the details of movement of data.
 
 #### Types of ADO.NET
-- ***SQLConnection:*** It is used to establish an open connection to the SQL Server database. It is a sealed class so that cannot be inherited.
+- **SQLConnection:** It is used to establish an open connection to the SQL Server database. It is a sealed class so that cannot be inherited.
 
 #### Example
 ```csharp       
@@ -275,7 +275,7 @@ using (SqlConnection connection = new SqlConnection(connectionString)) {
 } 
 ```
 
-- ***SQLCommand:*** This class is used to store and execute SQL statement for SQL Server database. It is a sealed class so that cannot be inherited.
+- **SQLCommand:** This class is used to store and execute SQL statement for SQL Server database. It is a sealed class so that cannot be inherited.
 
 #### Example
 ```csharp       
@@ -306,9 +306,9 @@ static void Main(string[] args) {
             }  
         }  
 ```
-- ***SQLDataReader:*** This class is used to read data from SQL Server database. It reads data in forward-only stream of rows from a SQL Server database. it is sealed class so that cannot be inherited. It inherits DbDataReader class and implements IDisposable interface.
+- **SQLDataReader:** This class is used to read data from SQL Server database. It reads data in forward-only stream of rows from a SQL Server database. it is sealed class so that cannot be inherited. It inherits DbDataReader class and implements IDisposable interface.
     
-- ***SQLDataAdapter:*** The DataAdapter works as a bridge between a DataSet and a data source to retrieve data. DataAdapter is a class that represents a set of SQL commands and a database connection. It can be used to fill the DataSet and update the data source.
+- **SQLDataAdapter:** The DataAdapter works as a bridge between a DataSet and a data source to retrieve data. DataAdapter is a class that represents a set of SQL commands and a database connection. It can be used to fill the DataSet and update the data source.
 
 #### Example
 ```csharp       
@@ -330,9 +330,9 @@ namespace DataSetExample
     }  
 }  
 ```
-- ***Dataset:*** It is used to fetch data without interacting with a Data Source that's why, it also known as disconnected data access method. It is an in-memory data store that can hold more than one table at the same time.
-- ***DataTable:*** DataTable represents relational data into tabular form. ADO.NET provides a DataTable class to create and use data table independently. It does not have schema. We can create table schema by adding and constraints to the table.
-- ***DataColumn:*** The DataColumn object represents a column of a DataTable. It allows us to add data column to the DataColumnCollection using its Add method.
+- **Dataset:** It is used to fetch data without interacting with a Data Source that's why, it also known as disconnected data access method. It is an in-memory data store that can hold more than one table at the same time.
+- **DataTable:** DataTable represents relational data into tabular form. ADO.NET provides a DataTable class to create and use data table independently. It does not have schema. We can create table schema by adding and constraints to the table.
+- **DataColumn:** The DataColumn object represents a column of a DataTable. It allows us to add data column to the DataColumnCollection using its Add method.
 - DataRow: The DataCRow object represents rows of a DataTable. It allows us to add data column to the DataRowCollection using its Add method.
 
 #### Example
@@ -355,9 +355,9 @@ public partial class DataTableForm : System.Web.UI.Page {
 Entity Framework is an Object Relational Mapper (ORM) which is a type of tool that simplifies mapping between objects in your software to the tables and columns of a relational database. An open source ORM framework for ADO.NET.Responsible for creating database connections and executing commands. ORM also helps to keep track of changes to those objects.
 
 #### Types of Entity Framework (EF)
-- ***Model First:*** Using a Model-First approach, a developer may not need to write any code for generating a database. The tools are more of a drag and drop controls that just need inputs like name, properties and how they are related
-- ***Database First:*** Here we already have an existing database and need to access that in our application. Establishing the data access methodology for existing database with Entity Framework will help us to generate the context and classes in our solution through which we can access the database. 
-- ***Code First:*** Using the Code-First approach, a developer’s focus is only on the code and not on the database or data model. The developer can define classes and their mapping in the code itself.
+- **Model First:** Using a Model-First approach, a developer may not need to write any code for generating a database. The tools are more of a drag and drop controls that just need inputs like name, properties and how they are related
+- **Database First:** Here we already have an existing database and need to access that in our application. Establishing the data access methodology for existing database with Entity Framework will help us to generate the context and classes in our solution through which we can access the database. 
+- **Code First:** Using the Code-First approach, a developer’s focus is only on the code and not on the database or data model. The developer can define classes and their mapping in the code itself.
 
 # Question-12
 ### AutoMapper:
@@ -366,8 +366,8 @@ The AutoMapper in C# is a mapper between two objects. That is AutoMapper is an o
 # Question-13
 ### Data Types:
 In C#, these data types are categorized based on how they store their value in the memory.
-- ***Value Type:***  A data type is a value type if it holds a data value within its own memory space. It means the variables of these data types directly contain values. _Example: int i = 100;_
-- ***Reference Type:*** It stores the address where the value is being stored. In other words, a reference type contains a pointer to another memory location that holds the data. _Example: string s = "Hello World!";_
+- **Value Type:**  A data type is a value type if it holds a data value within its own memory space. It means the variables of these data types directly contain values. _Example: int i = 100;_
+- **Reference Type:** It stores the address where the value is being stored. In other words, a reference type contains a pointer to another memory location that holds the data. _Example: string s = "Hello World!";_
 
 # Question-13
 ### Boxing and Unboxing:
@@ -489,7 +489,7 @@ public void getMyName() {}
 </tr>
 </table>
 
-- ***Async function with await keyword***
+- **Async function with await keyword**
 
 #### Example
 ```csharp       
@@ -522,7 +522,7 @@ Console.WriteLine(DateTime.Now);
 }
 Console.WriteLine(DateTime.Now);
 ```
-- ***How to cancel Task***
+- **How to cancel Task**
 
 #### Example
 ```csharp       
@@ -555,13 +555,17 @@ class Program {
 ASP.NET Web API is a framework that makes it easy to build HTTP Service that reaches a broad range of clients, including browsers and mobile devices. Using ASP.NET, web API can enable communicating by different devices from the same database.
 
 #### 1.CRUD Methods:
-- ***GET:*** The GET method means retrieve whatever information (in the form of an entity) is identified by the Request-URI.
-- ***POST:*** POST method has a value parameter which is of type string. Whatever we are passing here, we want to add it to our static variable.
-- ***PUT:*** PUT method has two parameters, the id and the new value which we want to update it with.
-- ***DELETE:*** We use the DELETE method to remove an item.
+- **GET:** The GET method means retrieve whatever information (in the form of an entity) is identified by the Request-URI.
+- **POST:** POST method has a value parameter which is of type string. Whatever we are passing here, we want to add it to our static variable.
+- **PUT:** PUT method has two parameters, the id and the new value which we want to update it with.
+- **DELETE:** We use the DELETE method to remove an item.
 
 #### 2. IHttpActionResult:
 IHttpActionResult contains a single method, ExecuteAsync, which asynchronously creates an HttpResponseMessage instance.If a controller action returns an IHttpActionResult, Web API calls the ExecuteAsync method to create an HttpResponseMessage. Then it converts the HttpResponseMessage into an HTTP response message.
+
+- OK
+- InternalServerError
+- BadRequest
 
 #### Example
 ```csharp       
@@ -586,6 +590,3 @@ public class TextResult : IHttpActionResult
     }
 }
 ```
-- OK
-- InternalServerError
-- BadRequest

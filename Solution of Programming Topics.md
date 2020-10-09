@@ -333,7 +333,7 @@ namespace DataSetExample
 - **Dataset:** It is used to fetch data without interacting with a Data Source that's why, it also known as disconnected data access method. It is an in-memory data store that can hold more than one table at the same time.
 - **DataTable:** DataTable represents relational data into tabular form. ADO.NET provides a DataTable class to create and use data table independently. It does not have schema. We can create table schema by adding and constraints to the table.
 - **DataColumn:** The DataColumn object represents a column of a DataTable. It allows us to add data column to the DataColumnCollection using its Add method.
-- DataRow: The DataCRow object represents rows of a DataTable. It allows us to add data column to the DataRowCollection using its Add method.
+- **DataRow:** The DataCRow object represents rows of a DataTable. It allows us to add data column to the DataRowCollection using its Add method.
 
 #### Example
 ```csharp       

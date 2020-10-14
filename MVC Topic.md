@@ -1,13 +1,13 @@
 # Question-1
 ##  Model View Controller (MVC):
 The Model View Controller (MVC) design pattern specifies that an application consist of a data model, presentation information, and control information. The pattern requires that each of these be separated into different objects.
-1. **Model**
+- **Model**
 This part of the design pattern is the primary part and contains purely application information. It doesn’t contain any information on how to show the data to the user. It is independent of the user interface. It controls the logic and rules of application.
 
-2. **View**
+- **View**
 This part helps the user to see the model’s data. The main concern of this part is to access the model’s data. The view section uses a chart, table or diagrams to represent the information. It can also show similar data and use bar graphs and tables for different purposes. It is a visualization of information that the application contains.
 
-3. **Controller**
+- **Controller**
 Most of the work is done by the controller. It provides the support for input and converts the input to commands for the application. It is used between the model and view part. The model and the view are interconnected, so the execution is reflected in the view part.
 
 # Question-2
@@ -85,7 +85,7 @@ public class FirstController: Controller {
 public class FirstController: Controller {  
     // GET: First  
     public ActionResult Index() {  
-        TempData["Message"] = "Hello RAJESH!";   
+        TempData["Message"] = "Hello SAAD!";   
          return new RedirectResult(@"~\Second\");
     }  
 }
@@ -101,4 +101,21 @@ public class FirstController: Controller {
     <div> @TempData["Message"]; </div>  
 </body>    
 </html> 
+```
+# Question 4
+## Action Result:
+Action Result is a result of action methods or return types of action methods. Action result is an abstract class. It is a base class for all type of action results.
+
+#### Example
+```csharp   
+namespace System.Web.Mvc  
+{  
+    public abstract class ActionResult  
+    {  
+        //  
+        // Summary:  
+        //     Initializes a new instance of the System.Web.Mvc.ActionResult class.  
+        protected ActionResult();  
+    }  
+}
 ```

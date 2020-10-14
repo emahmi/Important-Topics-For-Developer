@@ -120,31 +120,16 @@ namespace System.Web.Mvc
 }
 ```
 ### Types of Action Results:
-- View Result
-- Partial View Result
-- Redirect Result
-- Redirect To Action Result
-- Redirect To Route Result
-- Json Result
-- File Result
-- Content Result
+- **Partial View Result** is returning the result to Partial view page. Partial view is one of the views that we can call inside Normal view page.
 
-- **View result** is a basic view result. It returns basic results to view page. View result can return data to view page through which class is defined in the model. View page is a simple HTML page. Here view page has “.cshtm” extension.
+- **Redirect result** is returning the result to specific URL. It is rendered to the page by URL. If it gives wrong URL, it will show 404 page errors.
 
-#### Example
-```csharp  
- 
-```
-**Partial View Result** is returning the result to Partial view page. Partial view is one of the views that we can call inside Normal view page.
+- **Redirect to Action result** is returning the result to a specified controller and action method. Controller name is optional in Redirect to Action method. If not mentioned, Controller name redirects to a mentioned action method in current Controller. Suppose action name is not available but mentioned in the current controller, then it will show 404 page error.
 
-**Redirect result** is returning the result to specific URL. It is rendered to the page by URL. If it gives wrong URL, it will show 404 page errors.
+- **Json result** is a significant Action Result in MVC. It will return simple text file format and key value pairs. If we call action method, using Ajax, it should return Json result.
 
-**Redirect to Action result** is returning the result to a specified controller and action method. Controller name is optional in Redirect to Action method. If not mentioned, Controller name redirects to a mentioned action method in current Controller. Suppose action name is not available but mentioned in the current controller, then it will show 404 page error.
+- **File Result** returns different file format view page when we implement file download concept in MVC using file result. 
 
-**Json result** is a significant Action Result in MVC. It will return simple text file format and key value pairs. If we call action method, using Ajax, it should return Json result.
+- **Content result returns** different content's format to view. MVC returns different format using content return like HTML format, Java Script format and any other format.
 
-**File Result** returns different file format view page when we implement file download concept in MVC using file result. 
-
-**Content result returns** different content's format to view. MVC returns different format using content return like HTML format, Java Script format and any other format.
-
-[Click here for examples](https://www.c-sharpcorner.com/article/different-types-of-action-results-in-asp-net-mvc/)
+[Click here to see examples](https://www.c-sharpcorner.com/article/different-types-of-action-results-in-asp-net-mvc/)

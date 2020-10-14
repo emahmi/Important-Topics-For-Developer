@@ -589,5 +589,4 @@ public class TextResult : IHttpActionResult
         return Task.FromResult(response);
     }
 }
-
 ```

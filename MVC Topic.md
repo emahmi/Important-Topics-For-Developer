@@ -167,3 +167,10 @@ public class Student  {
    public int Mobile { get; set; }  
 }
 ```
+# Question-6
+## Filter Attributes:
+Filters are custom classes that provide both a declarative and programmatic means to add pre-action and post-action behavior to controller action methods.
+- **Authorization filters** performs authentication and authorizes before executing an action method.
+- **Action filters** performs some operation before and after an action method executes.   
+- **Result filters** performs some operation before or after the execution of the view.
+- **Exception filters** performs some operation if there is an unhandled exception thrown during the execution of the ASP.NET MVC pipeline.

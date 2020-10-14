@@ -133,3 +133,37 @@ namespace System.Web.Mvc
 - **Content result returns** different content's format to view. MVC returns different format using content return like HTML format, Java Script format and any other format.
 
 [Click here to see examples](https://www.c-sharpcorner.com/article/different-types-of-action-results-in-asp-net-mvc/)
+
+
+# Question-5
+## DataAnnotations:
+Data annotations are attributes that can be applied to classes or class members to specify the relationship between classes, describe how the data is to be displayed in the UI, and specify validation rules. 
+#### Example
+```csharp
+public class Student  {
+  
+   [ScaffoldColumn(false)]  
+   publicintStudentID { get; set; }  
+   [DataType(DataType.Text)]  
+   [Required(ErrorMessage = "Please enter name"), MaxLength(30)]  
+   [Display(Name = "Student Name")]  
+
+   public string Name { get; set; }  
+   [MaxLength(3),MinLength(1)]  
+   [Required(ErrorMessage = "Please enter marks")]  
+
+   publicint Marks { get; set; }  
+   [DataType(DataType.EmailAddress)]  
+   [Required(ErrorMessage = "Please enter Email ID")]  
+   [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$", ErrorMessage = "Email is not valid.")]  
+
+   public string Email { get; set; }  
+   [Required(ErrorMessage = "Please enter department")]  
+
+   public string Department { get; set; }  
+   [Required(ErrorMessage = "Please enter Mobile No")]  
+   [Display(Name = "Contact Number")]  
+   [DataType(DataType.PhoneNumber)]  
+   public int Mobile { get; set; }  
+}
+```
